@@ -9,11 +9,52 @@
 <body>
 
 <form>
+<p>
+    <label for="nome">Nome do Produto:</label>
+    <input type="text" name="nome" id="nome" required>
+</p>
 
-    <input type="" value="" placeholder="Nome:" for="salvar" id="input">
-    <h1></h1>
-    <button type="submit" name="salvar">Salvar</button>
-    
+<p>
+    <input type="radio" name="pgt" id="debito" value="debito">
+    <label for="debito">Débito</label>
+    <br>
+    <input type="radio" name="pgt"  id="credito" value="credito">
+    <label for="credito">Crédito</label>
+    <br>
+    <input type="radio" name="pgt"  id="dinheiro" value="dinheiro"> 
+    <label for="dinheiro">Dinheiro</label>
+</p>
+
+<p>
+    <label for="">Escolha uma cor:</label>
+    <input type="color" name="cor" id="cor">
+</p>
+
+<p>
+    <label for="data">Escolha a data de envio:</label>
+    <input type="date" name="data" id="data">
+</p>
+
+<p>
+    <label for="arquivo">Envie a foto do comprovante:</label>
+    <input type="file" name="arquivo" id="arquvio">
+
+</p>
+    <label for="select">Informe a quantidade:</label>
+    <select name="select" id="select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+<p>
+
+</p>
+<input type="submit" value="Salvar">
+
+
+
 </form>
 
 
@@ -30,6 +71,3 @@ console.log(input.value)
 
 </body>
 </html>
-
-//testeeeeeeeee
-//testeeeeeeee
