@@ -10,8 +10,10 @@ class Produto extends CI_Controller {
     }
 
 	public function index()
-	{
+	{   
+        $this->load->view('templates/header');
 		$this->load->view('cadastro_produto');
+        $this->load->view('templates/footer');
 	}
 
     public function cadastro()
@@ -22,6 +24,8 @@ class Produto extends CI_Controller {
             'preco' => $this->input->post('preco')
         );
 
+        $this->load->view('templates/header');
         $this->load->view('gestao_produto', $data);
+        $this->load->view('templates/footer');
     }
 }
