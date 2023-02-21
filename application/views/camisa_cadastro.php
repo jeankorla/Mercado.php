@@ -7,7 +7,7 @@
     <title>Formulario Camisa Cadastro</title>
 </head>
 <body>
-    <form action="<?= base_url('Camisa/cadastro') ?>" method="post">
+    <form action="<?= base_url('Camisa/create') ?>" method="post">
         <!-- NOME  -->
         <label for="nome">Nome</label>
         <input type="text" id="nome" name="nome" placeholder="Nome da marca">
@@ -24,8 +24,8 @@
         <br>
 
         <!-- COR -->
-        <label for="color">Cor:</label>
-        <input type="color" name="color" id="color">
+        <label for="cor">Cor:</label>
+        <input type="color" name="cor" id="cor">
         <br>
 
         <input type="submit">

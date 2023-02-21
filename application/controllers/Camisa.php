@@ -16,8 +16,18 @@ class Camisa extends CI_Controller {
         $this->load->view('templates/footer');
     }
 
-    public function cadastro()
+    public function create()
     {
+        $this->load->database('');
+
+        $data = array(
+            'nome' => $this->input->post('nome'),
+            'tamanho' =>$this->input->post('tamanho'),
+            'cor' => $this->input->post('cor')
+        );
+
+        $this->db->insert('Camisas', $data);
+
         $this->load->model('CamisaModel');
     
         $data['camisas'] = $this->CamisaModel->selectAll();
