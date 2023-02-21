@@ -15,6 +15,6 @@ jobs:
     - name: Deploy Finalizado
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: ${{ secrets.SERVER }}
-        username: ${{ secrets.USERNAME_PRODUCAO }}
-        password: ${{ secrets.PASSWORD_PRODUCAO }}
+        server: 50.116.86.134
+        username: mercado@scsport.com.br
+        password: C0mpany!SC10
