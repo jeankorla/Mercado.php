@@ -20,10 +20,7 @@ class Camisa extends CI_Controller {
     {
         $this->load->model('CamisaModel');
     
-        $data = $this->CamisaModel->selectAll();
-
-        print_r($data);
-        exit();
+        $data['camisas'] = $this->CamisaModel->selectAll();
 
         $this->load->view('templates/header');
         $this->load->view('camisa_gestao', $data);
