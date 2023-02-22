@@ -9,20 +9,26 @@
 <body>
     <table>
         <tr>
-            <td>Nome:</td>
-            <td>Sobrenome:</td>
-            <td>Idade:</td>
-            <td>E-mail:</td>
-            <td>Senha:</td>
+            <th>ID</th>
+            <th>Nome:</th>
+            <th>Sobrenome:</th>
+            <th>Idade:</th>
+            <th>E-mail:</th>
+            <th>Senha:</th>
         </tr>
 
+        
+        <?php foreach ($usuarios as $usuario) : ?>
         <tr>
-            <td><?= $nome; ?></td>
-            <td><?= $sobrenome; ?></td>
-            <td><?= $idade; ?></td>
-            <td><?= $email; ?></td>
-            <td><?= $senha; ?></td>
+            <th><?= $usuario['ID'] ?></th>
+            <th><?= $usuario['NOME'] ?></th>
+            <th><?= $usuario['SOBRENOME'] ?></th>
+            <th><?= $usuario['IDADE'] ?></th>
+            <th><?= $usuario['EMAIL'] ?></th>
+            <th><?= $usuario['SENHA'] ?></th>
         </tr>
+    <?php endforeach; ?>
+       
     </table>
 </body>
 </html>

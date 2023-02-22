@@ -17,14 +17,27 @@ class Usuario extends CI_Controller {
     }
 
     public function cadastro()
-    {
+    {   
+        //cadastrando usuarios
+        $this->load->database('Usuarios');
+
         $data = array(
+
             'nome' => $this->input->post('nome'),
             'sobrenome' => $this->input->post('sobrenome'),
             'idade' => $this->input->post('idade'),
             'email' => $this->input->post('email'),
-            'senha' => $this->input->post('senha')
+            'senha' => $this->input->post('senha'),
         );
+
+        $this->db->insert('Usuarios', $data);
+
+
+        //carregando usuarios
+
+        $this->load->model('UsuarioModel');
+
+        $data['usuarios'] = $this->UsuarioModel->selectAll();
 
         $this->load->view('templates/header');
         $this->load->view('usuario_gestao', $data);

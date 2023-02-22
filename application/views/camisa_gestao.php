@@ -1,17 +1,17 @@
 <table>
     <tr>
-        <td>ID</td>
-        <td>Nome</td>
-        <td>Tamanho</td>
-        <td>Cor</td>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Tamanho</th>
+        <th>Cor</th>
     </tr>
 
     <?php foreach ($camisas as $camisa) : ?>
         <tr>
-            <td><?= $camisa['ID'] ?></td>
-            <td><?= $camisa['NOME'] ?></td>
-            <td><?= $camisa['TAMANHO'] ?></td>
-            <td><?= $camisa['COR'] ?></td>
+            <th><?= $camisa['ID'] ?></th>
+            <th><?= $camisa['NOME'] ?></th>
+            <th><?= $camisa['TAMANHO'] ?></th>
+            <th><?= $camisa['COR'] ?></th>
         </tr>
     <?php endforeach; ?>
 </table>

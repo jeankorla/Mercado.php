@@ -11,7 +11,6 @@
 
     <div class="header">
         <h1 id="title">MERCADO</h1>
-
         <div>
             <a class="menu" href="<?= base_url("Produto"); ?>"> Produto</a>
             <a class="menu" href="<?= base_url("Camisa"); ?>"> Camisa</a>

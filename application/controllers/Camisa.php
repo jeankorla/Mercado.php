@@ -18,7 +18,7 @@ class Camisa extends CI_Controller {
 
     public function create()
     {
-        $this->load->database('');
+        $this->load->database('Camisas');
 
         $data = array(
             'nome' => $this->input->post('nome'),

@@ -9,12 +9,13 @@
 <body>
     <table>
         <tr>
-            <td>NOME: </td>
-            <td>CNPJ: </td>
+            <th>ID</th>
+            <th>NOME: </th>
+            <th>CNPJ: </th>
         </tr>
         <tr>
-            <td><?= $nome; ?></td>
-            <td><?= $cnpj; ?></td>
+            <th><?= $nome; ?></th>
+            <th><?= $cnpj; ?></th>
         </tr>
     </table>
 </body>

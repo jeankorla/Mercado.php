@@ -9,16 +9,22 @@
 <body>
     <hr>
     <table>
-        <tr>
-            <td>Nome:</td>
-            <td>Custo:</td>
-            <td>Valor:</td>
+        <tr>    
+            <th>ID</th>
+            <th>Nome:</th>
+            <th>Custo:</th>
+            <th>Valor:</th>
         </tr>
+        
+        <?php foreach ($produtos as $produto) : ?>
         <tr>
-            <td><?= $nome; ?></td>
-            <td><?= $custo; ?></td>
-            <td><?= $preco; ?></td>             
+            <th><?= $produto['ID'] ?></th>
+            <th><?= $produto['NOME'] ?></th>
+            <th><?= $produto['CUSTO'] ?></th>
+            <th><?= $produto['PRECO'] ?></th>
         </tr>
+    <?php endforeach; ?>           
+        
     </table>
 </body>
 </html>
