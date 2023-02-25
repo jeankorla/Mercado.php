@@ -74,11 +74,11 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> '',
-	'hostname' => '50.116.86.134',
-	'username' => 'migracon_wp181',
-	'password' => 'Company@)@@',
-	'database' => 'migracon_mercado',
+	'dsn'	=> 'ns110.hostgator.com.br',
+	'hostname' => '192.185.210.4',
+	'username' => 'yourpo80_mercado',
+	'password' => '5Zy~lHX$[mT#',
+	'database' => 'yourpo80_mercado',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

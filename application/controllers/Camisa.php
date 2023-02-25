@@ -3,22 +3,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Camisa extends CI_Controller {
 
-    public function __construct()
-    {
-        parent::__construct();
-        $this->load->helper('url');
-    }
+    public $db;
+    public $input;
+    public $CamisaModel;
 
     public function index()
     {
+        $this->load->model('CamisaModel');
+        
+        $data['camisas'] = $this->CamisaModel->selectAll();
+
         $this->load->view('templates/header');
-        $this->load->view('camisa_cadastro');
+        $this->load->view('gestao/camisa', $data);
         $this->load->view('templates/footer');
     }
 
     public function create()
     {
-        $this->load->database('Camisas');
+        
 
         $data = array(
             'nome' => $this->input->post('nome'),
@@ -33,7 +35,7 @@ class Camisa extends CI_Controller {
         $data['camisas'] = $this->CamisaModel->selectAll();
 
         $this->load->view('templates/header');
-        $this->load->view('camisa_gestao', $data);
+        $this->load->view('gestao/camisa', $data);
         $this->load->view('templates/footer');
     }
 }

@@ -1,45 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;1,800;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
+    font-family: "montserrat";
 }
-body{
-   width: 100%;
-   height: 100vh;
-   font-family: "montserrat";
+
+body {
+    height: 100vh;
 }
-.header{
-    margin: 0;
+
+a {
+    text-decoration: none;
+}
+
+/*----------------------------------------------------------------------------------*/
+/* NAVBAR */
+
+#navbar {
+    height: 4rem;
+    width: 100%;
+
     position: absolute;
     top: 0;
-    background-color: #222;
-    color: #fff;
-    width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;   
-}
-#title{
-    margin-left: 1rem;
-}
-.menu{
+
     color: #fff;
 }
-form{
-    color: #fff;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #222;
-    border-radius: 10px;
-    padding: 60px;
-    width: min-content;
-    align-items: center;
+
+/*----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------*/
+/* BACKGROUND */
+
+#background {
+    height: 100%;
+    width: 100%;
+
+    padding: 5rem 1.5rem 1.5rem 1.5rem;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    background-color: #ddd;
 }
-table{
+
+/*----------------------------------------------------------------------------------*/
+
+form {
     color: #fff;
     position: relative;
     top: 50%;
