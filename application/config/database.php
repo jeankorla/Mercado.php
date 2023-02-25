@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '50.116.86.134',
-	'username' => 'migracon_wp181',
-	'password' => 'Company@)@@',
-	'database' => 'migracon_mercado',
+	'hostname' => '192.185.210.4',
+	'username' => 'yourpo80_mercado',
+	'password' => 'Jean35073362',
+	'database' => 'yourpo80_mercado',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

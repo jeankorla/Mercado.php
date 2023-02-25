@@ -8,12 +8,14 @@
 </head>
 <body>
     <hr>
+    <form action="<?= base_url('produto/view'); ?>" method="post">
     <table>
         <tr>    
             <th>ID</th>
             <th>Nome:</th>
             <th>Custo:</th>
             <th>Valor:</th>
+            <th>Ações:</th>
         </tr>
         
         <?php foreach ($produtos as $produto) : ?>
@@ -22,9 +24,14 @@
             <th><?= $produto['NOME'] ?></th>
             <th><?= $produto['CUSTO'] ?></th>
             <th><?= $produto['PRECO'] ?></th>
+            <th>
+            <a href="<?php echo base_url("produto/editar/{$produto['ID']}"); ?>"class="btn btn-sucess">Editar</a>
+            </th>
+            <th>
+            <a href="<?php echo base_url("produto/excluir/{$produto['ID']}");?>" class="btn btn-danger">Excluir</a>
+            </th>
         </tr>
-    <?php endforeach; ?>           
-        
+    <?php endforeach; ?>
     </table>
 </body>
 </html>

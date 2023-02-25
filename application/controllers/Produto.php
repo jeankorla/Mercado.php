@@ -37,5 +37,46 @@ class Produto extends CI_Controller {
         $this->load->view('templates/header');
         $this->load->view('gestao_produto', $data);
         $this->load->view('templates/footer');
+
+
+    }
+    public function view()
+     {
+        //CARREGANDO DATA BASE
+        $this->load->model('ProdutoModel');
+    
+        $data['produtos'] = $this->ProdutoModel->selectAll();
+
+        $this->load->view('templates/header');
+        $this->load->view('gestao_produto', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function excluir($id) {
+        $this->load->model('ProdutoModel');
+        $this->ProdutoModel->excluir_produto($id);
+        redirect('produto/view');
+    }
+
+    public function editar($id) {
+        $this->load->model('ProdutoModel');
+        $data['produto'] = $this->ProdutoModel->selectAll($id);
+
+        $this->load->view('templates/header');
+        $this->load->view('editar_produto', $data);
+        $this->load->view('templates/footer');
+    }
+    public function salvar_edicao() {
+        $this->load->model('ProdutoModel');
+        $id = $this->input->post('id');
+        
+        $data['produto'] = $this->ProdutoModel->selectAll($id);
+
+        $id = $this->input->post('id');
+        $nome = $this->input->post('nome');
+        $custo = $this->input->post('custo');
+        $preco = $this->input->post('preco');
+        $this->ProdutoModel->atualizar_produto($id, $nome, $custo, $preco);
+        redirect('produto/view');
     }
 }

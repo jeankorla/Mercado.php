@@ -18,6 +18,10 @@
         <input type="number" id="preco" name="preco">
         <br />
         <input type="submit" name="submit">
+        ou
+        <button>
+            <?php echo anchor("produto/view", 'VER BD') ?>
+        </button>
     </form>
 </body>
 </html>
