@@ -8,15 +8,15 @@
 </head>
 <body>
     <form action="<?= base_url('produto/salvar_edicao'); ?>" method="post">
-        <input type="hidden" name="id" value="<?= $produto['id'] ?>">
+        <input type="hidden" name="id" value="<?= $produto['ID'] ?>">
         <label for="nome">Nome</label>
-        <input type="text" id="nome" name="nome" value="<?php  ?>">
+        <input type="text" id="nome" name="nome" value="<?php echo $produto['NOME'] ?>">
         <br />
         <label for="custo">Custo Produto</label>
-        <input type="number" id="custo" name="custo">
+        <input type="number" id="custo" name="custo" value="<?php echo $produto['CUSTO'] ?>">
         <br />
         <label for="preco">Preço Produto</label>
-        <input type="number" id="preco" name="preco">
+        <input type="number" id="preco" name="preco" value="<?php echo $produto['PRECO'] ?>">
         <br />
         <input type="submit" name="submit">
         ou

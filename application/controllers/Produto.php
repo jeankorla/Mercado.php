@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Produto extends CI_Controller {
 
+    
     public function __construct()
     {
         parent::__construct();
@@ -40,6 +41,7 @@ class Produto extends CI_Controller {
 
 
     }
+    
     public function view()
      {
         //CARREGANDO DATA BASE
@@ -59,18 +61,21 @@ class Produto extends CI_Controller {
     }
 
     public function editar($id) {
+
         $this->load->model('ProdutoModel');
-        $data['produto'] = $this->ProdutoModel->selectAll($id);
+
+        $data['produto'] = $this->ProdutoModel->filter($id);
 
         $this->load->view('templates/header');
         $this->load->view('editar_produto', $data);
         $this->load->view('templates/footer');
     }
+
     public function salvar_edicao() {
         $this->load->model('ProdutoModel');
         $id = $this->input->post('id');
         
-        $data['produto'] = $this->ProdutoModel->selectAll($id);
+        $data['produto'] = $this->ProdutoModel->filter($id);
 
         $id = $this->input->post('id');
         $nome = $this->input->post('nome');
