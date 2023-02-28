@@ -12,7 +12,7 @@ class Usuario extends CI_Controller {
     public function index()
     {
         $this->load->view('templates/header');
-        $this->load->view('usuario_cadastro');
+        $this->load->view('Cadastro/usuario_cadastro');
         $this->load->view('templates/footer');
     }
 
@@ -40,7 +40,7 @@ class Usuario extends CI_Controller {
         $data['usuarios'] = $this->UsuarioModel->selectAll();
 
         $this->load->view('templates/header');
-        $this->load->view('usuario_gestao', $data);
+        $this->load->view('Gestão/usuario_gestao', $data);
         $this->load->view('templates/footer');
     }
 

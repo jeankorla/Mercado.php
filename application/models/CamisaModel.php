@@ -6,4 +6,10 @@ class CamisaModel extends CI_Model {
     {
         return $this->db->get('Camisas')->result_array();
     }
+
+    public function excluir($id)
+    {
+    $this->db->where('ID', $id);
+    $this->db->delete('Camisas');
+    }
 }

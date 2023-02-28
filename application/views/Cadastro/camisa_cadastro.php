@@ -8,6 +8,7 @@
 </head>
 <body>
     <form action="<?= base_url('Camisa/create') ?>" method="post">
+        
         <!-- NOME  -->
         <label for="nome">Nome</label>
         <input type="text" id="nome" name="nome" placeholder="Nome da marca">
@@ -29,6 +30,10 @@
         <br>
 
         <input type="submit">
+        ou
+        <button>
+            <?php echo anchor("camisa/view", 'VER BD') ?>
+        </button>
     </form>
 </body>
 </html>

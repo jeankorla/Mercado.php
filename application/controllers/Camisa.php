@@ -12,7 +12,7 @@ class Camisa extends CI_Controller {
     public function index()
     {
         $this->load->view('templates/header');
-        $this->load->view('camisa_cadastro');
+        $this->load->view('Cadastro/camisa_cadastro');
         $this->load->view('templates/footer');
     }
 
@@ -33,7 +33,27 @@ class Camisa extends CI_Controller {
         $data['camisas'] = $this->CamisaModel->selectAll();
 
         $this->load->view('templates/header');
-        $this->load->view('camisa_gestao', $data);
+        $this->load->view('Gestão/camisa_gestao', $data);
         $this->load->view('templates/footer');
+    }
+
+    public function view()
+    {
+        //CARREGANDO BD
+            
+        $this->load->model('CamisaModel');
+        
+        $data['camisas'] = $this->CamisaModel->selectAll();
+
+        $this->load->view('templates/header');
+        $this->load->view('Gestão/camisa_gestao', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function excluir($id)
+    {
+        $this->load->model('CamisaModel');
+        $this->CamisaModel->excluir($id);
+        redirect('camisa/view');
     }
 }
